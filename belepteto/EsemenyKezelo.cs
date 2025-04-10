@@ -84,7 +84,7 @@ namespace belepteto
             var belepes = GetEsemenyek(1).Where(x => x.Kod == kod).ToList().OrderBy(x => x.IdpontTime).First();
             var kilepes = GetEsemenyek(2).Where(x => x.Kod == kod).ToList().OrderByDescending(x => x.IdpontTime).First();
             TimeOnly idotartam = TimeOnly.Parse(Convert.ToString(kilepes.IdpontTime - belepes.IdpontTime));
-            return ($"{idotartam.Hour} óra {idotartam.Minute} perc");
+            return ($"A tanuló érkezése és távozása között {idotartam.Hour} óra {idotartam.Minute} perc telt el.");
         }
     }
 }

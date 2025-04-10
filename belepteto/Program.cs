@@ -23,11 +23,4 @@ esemenyKezelo.Logok().ForEach(x => Console.Write($"{x} "));
 Console.WriteLine("7. feladat");
 Console.Write("Egy tanuló azonosítója=");
 var input = Console.ReadLine();
-if (esemenyKezelo.TartozkodasiIdo(input)[0] == 'I')
-{
-    Console.WriteLine(esemenyKezelo.TartozkodasiIdo(input));
-}
-else
-{
-    Console.WriteLine($"A tanuló érkezése és távozása között {esemenyKezelo.TartozkodasiIdo(input)} telt el");
-}
+Console.WriteLine(esemenyKezelo.TartozkodasiIdo(input));
